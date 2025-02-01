@@ -71,14 +71,17 @@ class DisciplineTeacher(Teacher):
         consultation_old = super().give_a_consultation(consultations)
         consultation = f'По предмету {self.__discipline} как {self.__job_title}'
         return consultation_old, consultation   
-     
+
+#используем подкласс  
+   
 teacher1 = DisciplineTeacher('Иван Петров', 'РГУ', 4, 'Химия', 'Учитель')
 
+#сеттеры, геттеры
 
-# print(teacher1.get_name())
-# print(teacher1.get_education())
-# print(teacher1.get_experience())
-# teacher1.set_experience(2)
+print(teacher1.get_name())
+print(teacher1.get_education())
+print(teacher1.get_experience())
+teacher1.set_experience(2)
 
 print(*teacher1.get_teacher_data(), sep = '\n')
 print(*teacher1.add_mark('Николай Попов', 5), sep = '\n')
